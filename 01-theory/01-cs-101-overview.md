@@ -33,3 +33,11 @@ Guess a number between 0 and 100
  * Bisection search (convergence) - first guess would be 50, ask if the number is greater/less than 50, and eliminate half the values. Keep repeating until the correct value is reached.
     - taking the search space as being N, we're halving it N/2 with each guess. To reach the value you need log2N steps (or guesses).
     - guessing a number between 0 to 100, log2+100 = ~6.
+    
+##  Abstraction and Decomposition
+
+ * Abstraction - hide complexity/details, don't need to or want to see the detail - you don't need to know how something works to use it.
+ * Decomposition - break code up into to smaller, more manageable chunks or modules. Are self contained, helps to organise code and can be reused elsewhere.
+ * You can achieve abstraction and decomposition through the use of functions. You can also achieve decomposition through Classes.
+ 
+      
