@@ -75,3 +75,26 @@ function fib(n) {
 	return fib(n - 1) + fib(n - 2);
 }
 
+
+/*
+	Using recursions to solve Palindromes
+ */
+
+// without recursion
+function palindrome(str) {
+	let temp = str.replace(/[\W]/gi, '').toLowerCase();
+	if(temp.length <= 1) return true;
+	return temp === temp.split('').reverse().join('');
+}
+
+// using recursion
+function palindromeRecursion(str) {
+	let temp = str.replace(/[\W]/gi, '').toLowerCase();
+	
+	function isPalindrome(s) {
+		if(s.length <= 1) return true;
+		// if the first and last chars are equal, check the remainder of the string
+		return (s[0] == s[s.length - 1]) && isPalindrome(s.slice(1, s.length - 1));
+	}
+	return isPalindrome(temp);
+}
