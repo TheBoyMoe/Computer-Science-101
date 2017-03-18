@@ -38,3 +38,27 @@ function factorialRecursion(n) {
 	if(n == 1) return 1; // base case
 	return n * factorialRecursion(n - 1);
 }
+
+
+/*
+	Using recursion to solve Towers of Hanoi
+
+ */
+function move(from, to) {
+	console.log(`Move from ${from} to ${to}`);
+}
+
+let count = 0;
+function towerOfHanoi(n, from, to, spare) {
+	if(n == 1){
+		move(from, to);
+		count++;
+	}
+	else {
+		towerOfHanoi(n - 1, from, spare, to);
+		towerOfHanoi(1, from, to, spare);
+		towerOfHanoi(n - 1, spare, to, from);
+	}
+	return count;
+}
+
