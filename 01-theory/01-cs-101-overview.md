@@ -24,4 +24,12 @@
  * for/while/do while loop
     - execution of block occurs if the condition evaluates as true
     - continues until the condition evaluates as false
-    - use 'break' statement to terminate loop early when a particular condition occurs, or use 'continue' to skip the current iteration     
+    - use 'break' statement to terminate loop early when a particular condition occurs, or use 'continue' to skip the current iteration.
+     
+## Basic Searching
+
+Guess a number between 0 and 100
+ * Guess and check - you would use a loop and starting at 0, increment by one each iteration until you reach the value
+ * Bisection search (convergence) - first guess would be 50, ask if the number is greater/less than 50, and eliminate half the values. Keep repeating until the correct value is reached.
+    - taking the search space as being N, we're halving it N/2 with each guess. To reach the value you need log2N steps (or guesses).
+    - guessing a number between 0 to 100, log2+100 = ~6.
