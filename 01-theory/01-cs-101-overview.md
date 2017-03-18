@@ -40,4 +40,10 @@ Guess a number between 0 and 100
  * Decomposition - break code up into to smaller, more manageable chunks or modules. Are self contained, helps to organise code and can be reused elsewhere.
  * You can achieve abstraction and decomposition through the use of functions. You can also achieve decomposition through Classes.
  
-      
+## Recursion
+ 
+ * Algorithimically - the process of reducing a problem to a smaller/simpler version of itself that is easier to solve (divide-and-conquer) - use the solution of the smaller problem to solve the larger problem.
+ * Programatically it is the process of a function calling itself. You require one or more base cases that can be solved to prevent an infinite loop.
+ * Points to remember when calling a recursive function:
+      - each recursive call creates it's own scope in the execution stack
+      - once the base case is reached, a value is returned to the function that called it, which in turn solves that function call and so on up the call stack to finally returning the result.
