@@ -65,9 +65,15 @@ Guess a number between 0 and 100
       * Big 'O' measures the growth in the upper bound - evalutates the algo and not the implementation or pc
         * express rate of growth relative to the input size
  * Types of order of growth: constant(number of operations constant no matter the size of input), linear(doubles when input doubles), quadratic, logarithmic(slows down as input grows), exponential (worst!)
-      * O(1) -> constant run time - rare
-      * O(n) -> grows linearly - double input, doubles the number of operations
+      * O(1) -> constant run time - rare (no matter how big the problem, takes same amount of time)
       * O(log n) -> logarithmic run time
+      * O(n) -> grows linearly - double input, doubles the number of operations
       * O(n log n) -> log linear run time
       * O(n pow c) -> polynomial run time - c is a constant
-      * O(c pow n) -> exponential run time -c is a constant raised to a power based on the size of n.
+      * O(c pow n) -> exponential run time -c is a constant raised to a power based on the size of n (worst of the lot)
+ 
+ * When designing algorithms, your goal is to be as high up in this listing as possible:
+     * Looping through an unsorted list looking for a particular element - grows linearly, O(n), where n is length.
+     * Looping through a sorted list - order of growth is linear, although average time to find item is less, O(n).
+     * Nested loops - O(length1 * length2), ie product where loops are of different lengths, worst case scenario loops are of the same length, O(n pow 2) - (n squared). Nested loops typically demonstrate quadratic behavior
+     
