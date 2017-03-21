@@ -65,7 +65,7 @@ Guess a number between 0 and 100
       * Big 'O' measures the growth in the upper bound - evaluates the algo and not the implementation or pc
         * express rate of growth relative to the input size
  
- * Types of order of growth: constant(number of operations constant no matter the size of input), linear, quadratic, logarithmic(slows down as input grows), exponential (worst!)
+ * Types of order of growth(complexity grows gowing down the list): constant(number of operations constant no matter the size of input), linear, quadratic, logarithmic(slows down as input grows), exponential (worst!)
       * O(1) -> constant run time - rare (will run in the same amount of time, independent of the size of input)
       * O(log n) -> logarithmic run time - complexity grows as log of size of one of it's inputs, e.g bisection search and binary search of a list
       * O(n) -> grows linearly - going from 10 to 100, is the same as going from 100 to 1000 operations - growth is constant
@@ -78,3 +78,11 @@ Guess a number between 0 and 100
      * Looping through a sorted list - order of growth is linear, although average time to find item is less since you can stop looking as soon as you find an item large than the target, still O(n).
      * NOTE: you can have loops and recursive calls whose order of growth is constant, O(1) - ONLY if number of iterations is independent of size of input. 
      * Nested loops - O(len1 * len2), ie product where loops are of different lengths, worst case scenario loops are of the same length, O(n^2) - (n squared). Nested loops typically demonstrate quadratic behavior.
+
+### Logarithmic Complexity - Bisection Search
+
+ * Both unsorted/sorted searches require walking down the list checking each item in turn, complexity is linear. Each iteration your reducing the problem by n - 1.
+ * Bisection search - starting with a SORTED list, pick an item that divides the list in half, check for the target. If not, check if the value is greater or smaller than the target - eliminate half of the items each iteration, reducing the problem size by n/2 each iteration.
+ * Example of a 'divide and conquer' algorithm, complexity is O(log n) where n is list length.
+ * Worst case you get down to a list of one element
+ 
