@@ -61,5 +61,13 @@ Guess a number between 0 and 100
       * evaluate algo efficiency when size of input is very large
       * express a program's run time as input increases
       * put an upper bound on growth
-      * look at the sections of the program which take the longest to run
-      
+      * look at the sections of the program which take the longest to run, e.g the loop that takes 5 operations for each value, and not returning the value at the end. Focus on the term that grows most rapidly.
+      * Big 'O' measures the growth in the upper bound - evalutates the algo and not the implementation or pc
+        * express rate of growth relative to the input size
+ * Types of order of growth: constant(number of operations constant no matter the size of input), linear(doubles when input doubles), quadratic, logarithmic(slows down as input grows), exponential (worst!)
+      * O(1) -> constant run time - rare
+      * O(n) -> grows linearly - double input, doubles the number of operations
+      * O(log n) -> logarithmic run time
+      * O(n log n) -> log linear run time
+      * O(n pow c) -> polynomial run time - c is a constant
+      * O(c pow n) -> exponential run time -c is a constant raised to a power based on the size of n.
