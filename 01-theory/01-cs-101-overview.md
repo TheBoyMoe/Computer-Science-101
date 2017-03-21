@@ -57,23 +57,24 @@ Guess a number between 0 and 100
       * count number of operations per item of data & multiply up.
       * still depends on implementation, though independent of the pc run on
       * need to consider if doubling size of input, will it double number of operations, quadruple, etc.
-    * order of growth (Big 'O' Notation) 
+    * order of growth (Big 'O' Notation - a way of measuring complexity) 
       * evaluate algo efficiency when size of input is very large
       * express a program's run time as input increases
-      * put an upper bound on growth
+      * put an upper bound on growth, as tight as possible
       * look at the sections of the program which take the longest to run, e.g the loop that takes 5 operations for each value, and not returning the value at the end. Focus on the term that grows most rapidly.
-      * Big 'O' measures the growth in the upper bound - evalutates the algo and not the implementation or pc
+      * Big 'O' measures the growth in the upper bound - evaluates the algo and not the implementation or pc
         * express rate of growth relative to the input size
- * Types of order of growth: constant(number of operations constant no matter the size of input), linear(doubles when input doubles), quadratic, logarithmic(slows down as input grows), exponential (worst!)
-      * O(1) -> constant run time - rare (no matter how big the problem, takes same amount of time)
-      * O(log n) -> logarithmic run time
-      * O(n) -> grows linearly - double input, doubles the number of operations
+ 
+ * Types of order of growth: constant(number of operations constant no matter the size of input), linear, quadratic, logarithmic(slows down as input grows), exponential (worst!)
+      * O(1) -> constant run time - rare (will run in the same amount of time, independent of the size of input)
+      * O(log n) -> logarithmic run time - complexity grows as log of size of one of it's inputs, e.g bisection search and binary search of a list
+      * O(n) -> grows linearly - going from 10 to 100, is the same as going from 100 to 1000 operations - growth is constant
       * O(n log n) -> log linear run time
-      * O(n pow c) -> polynomial run time - c is a constant
-      * O(c pow n) -> exponential run time -c is a constant raised to a power based on the size of n (worst of the lot)
+      * O(n^c) -> polynomial run time - c is a constant
+      * O(c^n) -> exponential run time -c is a constant raised to a power based on the size of n (worst of the lot)
  
  * When designing algorithms, your goal is to be as high up in this listing as possible:
      * Looping through an unsorted list looking for a particular element - grows linearly, O(n), where n is length.
-     * Looping through a sorted list - order of growth is linear, although average time to find item is less, O(n).
-     * Nested loops - O(length1 * length2), ie product where loops are of different lengths, worst case scenario loops are of the same length, O(n pow 2) - (n squared). Nested loops typically demonstrate quadratic behavior
-     
+     * Looping through a sorted list - order of growth is linear, although average time to find item is less since you can stop looking as soon as you find an item large than the target, still O(n).
+     * NOTE: you can have loops and recursive calls whose order of growth is constant, O(1) - ONLY if number of iterations is independent of size of input. 
+     * Nested loops - O(len1 * len2), ie product where loops are of different lengths, worst case scenario loops are of the same length, O(n^2) - (n squared). Nested loops typically demonstrate quadratic behavior.
