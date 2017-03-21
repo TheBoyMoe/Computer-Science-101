@@ -47,3 +47,19 @@ Guess a number between 0 and 100
  * Points to remember when calling a recursive function:
       - each recursive call creates it's own scope in the execution stack
       - once the base case is reached, a value is returned to the function that called it, which in turn solves that function call and so on up the call stack to finally returning the result.
+      
+## Algorithms and Program Efficiency
+
+ * Even though computers are speeding up, data sets are growing larger and larger - efficient algorithims are thus still important.
+ * Ways of determining program efficiency (we want to evaluate just the algo, we don't want it affected by the implementation or the pc its run on)
+    * time the operation different algos to solve the problem, e.g recursion v iterative technique. Affected by the implementation of the algo, spec of the pc, size of input.
+    * count operations the number of operations as a size of the input. Assume operations such as math operations, comparisons, assignments, accessing objects from ram - count the number of operations as a function of the size of the input - give you an idea of the efficiency of the algo.
+      * count number of operations per item of data & multiply up.
+      * still depends on implementation, though independent of the pc run on
+      * need to consider if doubling size of input, will it double number of operations, quadruple, etc.
+    * order of growth (Big 'O' Notation) 
+      * evaluate algo efficiency when size of input is very large
+      * express a program's run time as input increases
+      * put an upper bound on growth
+      * look at the sections of the program which take the longest to run
+      

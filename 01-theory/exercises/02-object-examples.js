@@ -3,6 +3,7 @@
 
  */
 
+// determine the number of times a word occurs
 function wordCount(str) {
 	return str.replace(/[^a-z ]/gi, '').split(' ').reduce(function (obj, word) {
 		if(!obj[word]) obj[word] = 0;
@@ -11,7 +12,7 @@ function wordCount(str) {
 	}, {})
 }
 
-// determine the most frequent word
+// determine the most frequent word in a string
 function mostFrequentWord(str) {
 	let frequency = wordCount(str);
 	let values = [], result = {};
@@ -26,4 +27,13 @@ function mostFrequentWord(str) {
 				result[p] = frequency[p];
 	}
 	return result;
+}
+
+/*
+	Using object/map(dictionary) to do the fibonacci calculation
+		- recursion is extremely inefficient since your calculating the same value many many times
+		- instead use an obj/map to keep track of values already computed
+ */
+function fib(n) {
+	
 }
