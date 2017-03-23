@@ -91,10 +91,31 @@ Guess a number between 0 and 100
 ### Polynomial Complexity
 
  * Most commonly seen in nested loops and recursive function calls.
- * Most common polynomial algorithims are quadratic - complexity grows with the square of the size of input O(n^2)
+ * Most common polynomial algorithms are quadratic - complexity grows with the square of the size of input O(n^2)
  
 ### Exponential Complexity
  
  * Most important problems are inherently exponential - often use approximate solutions to give an answer more quickly,
  * Commonly seen in recursive functions where more than one recursive call for each size of the problem, e.g Towers of Hanoi, fibonacci.
  * Order of growth O(2^n)
+ 
+### Searching and Sorting
+ 
+ * Li near search - walk down the list(does not have to be sorted), checking each item in turn - brute force. Complexity O(n) - n == list length
+ * Bisection search - list must be sorted. Two examples, one involves copying the array - O(n), the second uses pointers to keep track of a high and low value - O(log n) - check 03-algos-and-efficiency.js
+ * When does it make sense to sort first, then search?
+    * When SORT + O(log n) < O(n), e.g SORT < O(n) - O(log n)
+    * However, NEVER TRUE! Why? To sort a list you have to look at each element at least once. Sorting must be at least O(n) linear time.
+    * You can AMORTISE the cost, i.e, you sort a list once, then perform multiple searches on the same list.
+        * SORT + K*O(log n) < K*O(n)
+        * for large values of K (number of searches), sort becomes irrelevant if the cost of sorting is small enough
+ * How can we perform the sort?
+    * It's going to be linerally, since we're looking at every element
+    * Bubble sort 
+        - compare consecutive pairs of numbers, swap elms so that smaller is first(if req'd), compare it to the next element in the list, and so on. 
+        - When end of list is reached start again. Continue until no more swaps have been made.
+        - At most n passes, can be less if your're lucky, i.e small list.
+        - Complexity, worst case O(n^2) - check example for explanation - can be less
+    
+    
+        

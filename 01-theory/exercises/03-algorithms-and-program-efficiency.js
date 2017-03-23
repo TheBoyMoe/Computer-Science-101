@@ -3,7 +3,7 @@
 		- search through a sorted list for a particular value
  */
 
-// copy operation results in the order of growth/complexity of O(n) - not O(log n) - due to the copy operation
+// copy operation results in the order of growth/complexity of O(n) - due to the copy operation
 function bisectionSearch(arr, target) {
 	// return true if the target is found, false otherwise
 	if(arr.length == 0) return false;							// constant O(1)
