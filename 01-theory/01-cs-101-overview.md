@@ -93,4 +93,8 @@ Guess a number between 0 and 100
  * Most commonly seen in nested loops and recursive function calls.
  * Most common polynomial algorithims are quadratic - complexity grows with the square of the size of input O(n^2)
  
+### Exponential Complexity
  
+ * Most important problems are inherently exponential - often use approximate solutions to give an answer more quickly,
+ * Commonly seen in recursive functions where more than one recursive call for each size of the problem, e.g Towers of Hanoi.
+ * Order of growth O(2^n)

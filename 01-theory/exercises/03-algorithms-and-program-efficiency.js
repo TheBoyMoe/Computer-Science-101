@@ -50,3 +50,16 @@ function intToAString(n) {
 	}
 	return result.join('');
 }
+
+
+// Exponential complexity - Power Set - generate a set of integers from a set of integers from 1 to n
+function genSubsets(arr) {
+	if(arr.length == 0) return [[]];
+	let smaller = genSubsets(arr.slice(0, arr.length - 1)); // arr minus last element
+	let extra = arr.slice(arr.length - 1); // last element of arr
+	let temp = [];
+	smaller.forEach(function (elm) {
+		temp.push(elm.concat(extra));
+	});
+	return smaller.concat(temp);
+}
