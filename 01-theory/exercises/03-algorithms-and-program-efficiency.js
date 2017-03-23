@@ -18,7 +18,7 @@ function bisectionSearch(arr, target) {
 
 // Alternate version where you don't copy the elements, complexity of O(log n) - keep track of the high, low values
 function bisectionSearchAlt(arr, target) {
-	
+	// cost at each point is constant - in this case the implementation has an impact on the complexity(we generally don't care)
 	function helper(arr, target, low, high) {
 		if(high == low) return arr[low] == target;
 		let mid = Math.round((high + low)/2); // make sure it's an int
@@ -36,3 +36,17 @@ function bisectionSearchAlt(arr, target) {
 	return helper(arr, target, 0, arr.length - 1);
 }
 
+
+// Logorithmic Complexity - convert an int to a string
+function intToAString(n) {
+	let digits = '0123456789';
+	if(n == 0) return '0';
+	
+	let result = [];
+	while(n > 0) {
+		result.unshift(digits[n % 10]);
+		n = Math.floor(n/10);
+		console.log(result);
+	}
+	return result.join('');
+}

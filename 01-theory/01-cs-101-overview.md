@@ -85,4 +85,6 @@ Guess a number between 0 and 100
  * Bisection search - starting with a SORTED list, pick an item that divides the list in half, check for the target. If not, check if the value is greater or smaller than the target - eliminate half of the items each iteration, reducing the problem size by n/2 each iteration.
  * Example of a 'divide and conquer' algorithm, complexity is O(log n) where n is list length.
  * Worst case you get down to a list of one element
+ * Note: algo that reduces the problem by n - 1 each time -> linear. algo the reduces the problem by half each time(n/2 or n/3 or n/4, etc) is logarithmic(generally, unless there's a hidden cost somewhere) - log linear.
+ 
  
