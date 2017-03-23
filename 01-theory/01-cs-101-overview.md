@@ -88,3 +88,9 @@ Guess a number between 0 and 100
  * Note: algo that reduces the problem by n - 1 each time -> linear. algo the reduces the problem by half each time(n/2 or n/3 or n/4, etc) is logarithmic(generally, unless there's a hidden cost somewhere) - log linear.
  
  
+### Polynomial Complexity
+
+ * Most commonly seen in nested loops and recursive function calls.
+ * Most common polynomial algorithims are quadratic - complexity grows with the square of the size of input O(n^2)
+ 
+ 
