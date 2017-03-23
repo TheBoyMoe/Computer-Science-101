@@ -55,11 +55,23 @@ function intToAString(n) {
 // Exponential complexity - Power Set - generate a set of integers from a set of integers from 1 to n
 function genSubsets(arr) {
 	if(arr.length == 0) return [[]];
-	let smaller = genSubsets(arr.slice(0, arr.length - 1)); // arr minus last element
+	// arr minus last element - recursive call - for a set of size n, there are 2^n cases, O(2^n) - exponential complexity
+	// multiple recursive calls in a step is likely to lead to exponential complexity
+	let smaller = genSubsets(arr.slice(0, arr.length - 1));
 	let extra = arr.slice(arr.length - 1); // last element of arr
 	let temp = [];
 	smaller.forEach(function (elm) {
 		temp.push(elm.concat(extra));
 	});
 	return smaller.concat(temp);
+}
+
+
+// Exponential complexity - fibonacci example
+// worst case O(2^n)
+function fib(n) {
+	// assumes n is an int >= 0
+	if(n == 0) return 0;
+	if(n == 1) return 1;
+	return fib(n-1) + fib(n-2);
 }

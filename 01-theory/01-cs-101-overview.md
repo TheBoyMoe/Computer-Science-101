@@ -57,7 +57,7 @@ Guess a number between 0 and 100
       * count number of operations per item of data & multiply up.
       * still depends on implementation, though independent of the pc run on
       * need to consider if doubling size of input, will it double number of operations, quadruple, etc.
-    * order of growth (Big 'O' Notation - a way of measuring complexity) 
+    * order of growth (Big 'O' Notation - a way of measuring complexity, efficiency of an algorithm) 
       * evaluate algo efficiency when size of input is very large
       * express a program's run time as input increases
       * put an upper bound on growth, as tight as possible
@@ -96,5 +96,5 @@ Guess a number between 0 and 100
 ### Exponential Complexity
  
  * Most important problems are inherently exponential - often use approximate solutions to give an answer more quickly,
- * Commonly seen in recursive functions where more than one recursive call for each size of the problem, e.g Towers of Hanoi.
+ * Commonly seen in recursive functions where more than one recursive call for each size of the problem, e.g Towers of Hanoi, fibonacci.
  * Order of growth O(2^n)
