@@ -115,6 +115,11 @@ Guess a number between 0 and 100
         - compare consecutive pairs of numbers, swap elms so that smaller is first(if req'd), compare it to the next element in the list, and so on. 
         - When end of list is reached start again. Continue until no more swaps have bee made.
         - Complexity, worst case O(n^2) - check example for explanation - can be less - nested loops - quadratic order of growth.
+        
+    * Selection sort
+        - find the smallest elm in the list, swap it with the first elm, index 0
+        - repeat, find the smallest elm in the remaining elms(ignoring the foirst elm) and swap it with the elm at index 1.
+        - keep repeating 
     
     
         

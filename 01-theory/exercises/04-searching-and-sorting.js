@@ -46,3 +46,25 @@ function bubbleSort(arr) {
 	}
 	return arr;
 }
+
+
+// Selection Sort - complexity O(n^2) - quadratic complexity
+
+function selectionSort(arr) {
+	let count = 0, temp;
+	while(count < arr.length){ // loops n times
+		for(let i = 0; i < arr.length; i++){ // loos n times
+			if(arr[count] < arr[i]) {
+				// swap the two
+				temp = arr[i];
+				arr[i] = arr[count];
+				arr[count] = temp;
+			}
+		}
+		count++;
+	}
+	return arr;
+}
+
+
+
