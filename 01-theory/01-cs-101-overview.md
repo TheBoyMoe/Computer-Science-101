@@ -101,7 +101,7 @@ Guess a number between 0 and 100
  
 ### Searching and Sorting
  
- * Li near search - walk down the list(does not have to be sorted), checking each item in turn - brute force. Complexity O(n) - n == list length
+ * Linear search - walk down the list(does not have to be sorted), checking each item in turn - brute force. Complexity O(n) - n == list length
  * Bisection search - list must be sorted. Two examples, one involves copying the array - O(n), the second uses pointers to keep track of a high and low value - O(log n) - check 03-algos-and-efficiency.js
  * When does it make sense to sort first, then search?
     * When SORT + O(log n) < O(n) - (cost of sort + cost of log sort, eg bisection sort < cost of linear sort), e.g SORT < O(n) - O(log n)
@@ -116,10 +116,17 @@ Guess a number between 0 and 100
         - When end of list is reached start again. Continue until no more swaps have bee made.
         - Complexity, worst case O(n^2) - check example for explanation - can be less - nested loops - quadratic order of growth.
         
-    * Selection sort
+    * Selection sort  
         - find the smallest elm in the list, swap it with the first elm, index 0
         - repeat, find the smallest elm in the remaining elms(ignoring the foirst elm) and swap it with the elm at index 1.
-        - keep repeating 
-    
-    
-        
+        - keep repeating.
+        - complexity O(n^2)
+         
+    * Merge sort
+        - uses a divide and conquer approach, if the list has more than one element split into two, keep spliting until the lists have 0 or 1 elm.
+        - a list of length 0 or 1 is sorted.
+        - merge the sorted sublists - look at the first element of each, add the smaller to the result, keep repeating until one sublist is empty then add the remainder of the other to the result.
+        - complexity - sorting - each recursion is O(n) + O(n) - two lists each time == O(n). Merging - dividing the list in half with each recursive call is O(log n)
+        - Overall complexity is O(n log(n)) - the FASTEST a sort can be
+          
+   
