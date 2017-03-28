@@ -22,4 +22,7 @@
     - Problem - find the peak, if it exists.
     - A simple solution, starting from the left and working your way along the array 
     - Generally look at n/2 elements, in the worst case you would have to look at all elements, O(n) complexity
-    - Want to do better
+    - Want to do better - divide and conquer algorithm
+        - recursive step takes the n/2 position and look at the n/2 - 1 and then the n/2 + 1 position to see if it's greater - if not your done.
+        - eventually you end up at the base case, an array of one element which is the peak.
+        - results in a complexity of O(log n)
