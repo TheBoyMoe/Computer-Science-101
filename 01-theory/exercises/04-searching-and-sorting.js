@@ -67,4 +67,43 @@ function selectionSort(arr) {
 }
 
 
+// Merge Sort
+
+function mergeSort(arr) {
+	if(arr.length < 2) return arr; // base case
+	
+	let middle = Math.floor(arr.length/2);
+	
+	// divide step
+	let left = mergeSort(arr.slice(0, middle));
+	let right = mergeSort(arr.slice(middle));
+	
+	// conquer step
+	return merge(left, right);
+	
+	function merge(left, right) {
+		let result = [], i = 0, j = 0;
+		while(i < left.length && j < right.length){
+			if(left[i] < right[j]){
+				result.push(left[i]);
+				i++;
+			} else {
+				result.push(right[j]);
+				j++;
+			}
+		}
+		// when right sub list is empty
+		while(i < left.length){
+			result.push(left[i]);
+			i++;
+		}
+		// when left sub list is empty
+		while(j < right.length){
+			result.push(right[j]);
+			j++;
+		}
+		return result;
+	}
+}
+
 
