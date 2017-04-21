@@ -23,7 +23,7 @@ function mostFrequentWord(str) {
 	let max = Math.max(...values);
 	for(let p in frequency) {
 		if(frequency.hasOwnProperty(p))
-			if(frequency[p] == max)
+			if(frequency[p] === max)
 				result[p] = frequency[p];
 	}
 	return result;

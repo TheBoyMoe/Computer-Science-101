@@ -15,7 +15,7 @@ function multiplyNumbers(a, b) {
 
 function multiplyNumbersRecursively(a, b) {
 	// add a to itself b times
-	if(b == 1) return a; // base case
+	if(b === 1) return a; // base case
 	return a + multiplyNumbers(a, b - 1);
 }
 
@@ -35,7 +35,7 @@ function factorial(n) {
 }
 
 function factorialRecursion(n) {
-	if(n == 1) return 1; // base case
+	if(n === 1) return 1; // base case
 	return n * factorialRecursion(n - 1);
 }
 
@@ -50,7 +50,7 @@ function move(from, to) {
 
 let count = 0;
 function towerOfHanoi(n, from, to, spare) {
-	if(n == 1){
+	if(n === 1){
 		move(from, to);
 		count++;
 	}
@@ -71,7 +71,7 @@ function towerOfHanoi(n, from, to, spare) {
 
  */
 function fib(n) {
-	if(n == 0 || n == 1) return 1;
+	if(n === 0 || n === 1) return 1;
 	return fib(n - 1) + fib(n - 2);
 }
 
@@ -94,7 +94,7 @@ function palindromeRecursion(str) {
 	function isPalindrome(s) {
 		if(s.length <= 1) return true;
 		// if the first and last chars are equal, check the remainder of the string
-		return (s[0] == s[s.length - 1]) && isPalindrome(s.slice(1, s.length - 1));
+		return (s[0] === s[s.length - 1]) && isPalindrome(s.slice(1, s.length - 1));
 	}
 	return isPalindrome(temp);
 }
