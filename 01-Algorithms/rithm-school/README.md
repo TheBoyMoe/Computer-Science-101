@@ -1,0 +1,1 @@
+[link to exercises](https://github.com/rithmschool/javascript_computer_science_exercises)
