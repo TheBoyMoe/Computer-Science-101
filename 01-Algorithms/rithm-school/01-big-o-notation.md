@@ -95,3 +95,28 @@ The runtime of the inner loop is not proportional to n! The inner loop will run 
 that the outer loop, which is O(n), performs an O(1) operation for each value of num1. Overall, it's O(n) * O(1) -> O(n).
 
 ### Space Complexity
+Big O doesn't just deal with the amount of time that different algorithms take or time complexity.
+It's also used to talk about the amount of smapce, or memory, that the program requires, or Space Complexity.
+We're often concerned with the Auxiliary Space Complexity - how much additional memory is required beyond what is allocated for the inputs themselves
+
+    function total(array) {
+        var total = 0;
+        for (var i = 0; i < array.length; i++) {
+            total += array[i];
+        }
+        return total;
+    }
+
+The function total takes an array of length n and it's time complexity is O(n) - we're looping through it once and adding the total.
+The space complexity is O(1) - we only require one additional unit of space for the number stored in total.
+
+    function double(array) {
+        var newArray = [];
+        for (var i = 0; i < array.length; i++) {
+            newArray.push(2 * array[i]);
+        }
+        return newArray;
+    }
+ 
+The function total takes an array of length n, doubles each value in turn before adding those values to a new array and returning it.
+Both the time and space complexity are O(n). In this case we need n additional units of space, one for each value in the original array for each new value created before adding it to the new array.
