@@ -43,7 +43,7 @@ describe("#contains", function(){
                 }
             }
         }
-    };
+    }
     expect(contains(nestedObject, 44)).to.equal(true) // true)
   });
 });

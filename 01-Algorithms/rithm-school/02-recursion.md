@@ -16,15 +16,13 @@ A simple example:
        if(num === 1) return 1; 
        return num + sumRange(num-1);
     }
-The first line is the base case. In the second line we call the function again, but modify the parameter in such a way 
-that we eventually reach the base case and terminate the function.
+The first line is the base case. In the second line we call the function again, but modify the parameter in such a way that we eventually reach the base case and terminate the function.
 
 If you call sumRange(4), for instance, then this function will itself call sumRange(3) on this line, 
 which will add another copy of sumRange to the call stack. Similarly, sumRange will call sumRange(2), 
 which will add yet another copy of sumRange to the stack. This process will continue until we reach the 
 base case, after which these functions will start popping off of the stack. The call stack operates as a LIFO data structure.
-The last function pushed on, is the first popped off. As each function is popped off, it returns a value to the previous function
-resulting in it returning and being popped off in turn until you finally reach the very first call in the stack , which returns with a value.
+The last function pushed on, is the first popped off. As each function is popped off, it returns a value to the previous function resulting in it returning and being popped off in turn until you finally reach the very first call in the stack , which returns with a value.
 
 Examples of recursion:
 
@@ -46,8 +44,7 @@ Examples of recursion:
     }
     
 ### Scope in Recursion
-Often times in recursion we create wrapper or helper methods which are called multiple times by the outer function as a means 
-of creating additional scope - called Helper Method Recursion.
+Often times in recursion we create wrapper or helper methods which are called multiple times by the outer function as a means of creating additional scope - called Helper Method Recursion.
 
 In a purely iterative solution you could pass a callback to function, e.g all function returns true if every value of an array returns true when passed into the callback function
     

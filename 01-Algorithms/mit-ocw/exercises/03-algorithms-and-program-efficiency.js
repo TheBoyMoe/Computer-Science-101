@@ -1,5 +1,5 @@
 /*
-	Logarithmic complexity - Bisection Search
+	Logarithmic complexity - Bisection (Binary) Search
 		- search through a sorted list for a particular value
  */
 
