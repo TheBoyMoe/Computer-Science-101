@@ -93,7 +93,7 @@ console.log(search([1,2,3,4,5],15)) // -1
 const binarySearch = (array, value)=>{
     const helper = (array, value, left, right)=>{
         if(left > right) return -1;
-        let middleIndex = Math.floor(left + right)/2;
+        let middleIndex = Math.floor((left + right)/2);
         if(array[middleIndex] === value) return middleIndex;
         
         if(array[middleIndex] > value)
@@ -106,26 +106,46 @@ const binarySearch = (array, value)=>{
 
 console.log(binarySearch([1,2,3,4,5],5)) // 4
 console.log(binarySearch([1,2,3,4,5],15)) // -1
-
+console.log(binarySearch([1,2,3,4,5],6)) //-1
+console.log(binarySearch([1,2,3,4,5],11)) // -1
 
 // 6.  takes in an object and finds all of the values which are numbers and converts them to strings.
 
-const stringfyNumbers = (obj)=>{
-    
+const stringifyNumbersOld = (obj)=>{
     const helper = (obj)=>{
         for(let prop in obj){
             if(obj.hasOwnProperty(prop)){
-                if(typeof obj[prop] === 'number')
+                if(typeof obj[prop] === 'number') {
                     obj[prop] = '' + obj[prop];
+                }
                 else {
                     if(typeof obj[prop] === 'object' && !Array.isArray(obj[prop]))
-                        return stringfyNumbers(obj[prop]);
+                        return helper(obj[prop]);
                 }
             }
         }
     };
     helper(obj);
     return obj;
+};
+
+// does not change the original object ?? WHY BOTHER
+const stringifyNumbers = (obj)=>{
+    let newObj = {};
+    
+    for(let prop in obj){
+        if(obj.hasOwnProperty(prop)){
+            if(typeof obj[prop] === 'number') {
+                newObj[prop] = '' + obj[prop];
+            }
+            else if(typeof obj[prop] === 'object' && !Array.isArray(obj[prop])) {
+                newObj[prop] = stringifyNumbers(obj[prop]);
+            } else {
+                newObj[prop] = obj[prop];
+            }
+        }
+    }
+    return newObj;
 };
 
 let obj = {
@@ -140,7 +160,7 @@ let obj = {
     }
 };
 
-console.log(stringfyNumbers(obj));
+console.log(stringifyNumbersOld(obj));
 
 /* PART 2 - re-implement document methods using recursion - check traverse-dom-elements.js
 
