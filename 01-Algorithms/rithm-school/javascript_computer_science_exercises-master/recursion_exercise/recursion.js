@@ -6,6 +6,8 @@
 
 'use strict';
 
+// PART 1
+
 //1. Write a function called `productOfArray` which takes in an array of numbers and returns the product of them all
 const productOfArray = (array)=>{
     if(array.length === 0) return 1;
@@ -139,3 +141,43 @@ let obj = {
 };
 
 console.log(stringfyNumbers(obj));
+
+/* PART 2 - re-implement document methods using recursion - check traverse-dom-elements.js
+
+   References:
+   [1] http://stackoverflow.com/questions/33264842/implementing-getelementsbyclassname-recursively
+   [2] https://gist.github.com/armandocanals/9e3cebc015e93075e87c (recursive way to find elements by class name)
+   
+*/
+
+/*
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="row main sidepane">
+            <h1>
+                <p class="row foo"></p>
+                <div class="row main sidepane">
+                    <h2>
+                        <div class="row test">1</div>
+                    </h2>
+                </div>
+            </h1>
+        </div>
+        <div class="row">
+            <div class="main">
+                <h2 class="row">
+                    <div id="foo" class="row main sidepane">2</div>
+                </h2>
+            </div>
+        </div>
+        <div class="row"></div>
+    </body>
+</html>
+*/
+
+
