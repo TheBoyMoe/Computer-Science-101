@@ -25,5 +25,16 @@
  
 Bubble, insertion and selection sorts are simple, but inefficient sorting algorithms with a typical time complexity of O(n^2). Practical sorting algorithms used are almost always those that have an average time complexity of O(n log n) - the most common are heap, merge and quick sort.
 
-
+### Merge Sort
+ ![Merge Sort](/home/theboymo/WORK/WEBDEV/COMPUTER-SCIENCE-101/01-Algorithms/rithm-school/02-searching-and-sorting/imgs/Merge_sort_algorithm_diagram.png)
  
+  * split up the array until you can compare one value with another - giving you sorted pairs.
+  * take pairs of sorted pairs and sort them to end up with a sorted sub-arrays of four elements each.
+  * keep sorting and merging sub-arrays until you have one sorted array.
+  * once the array has been broken down into one-element sub-arrays, it takes O(n) comparisons to get two-element sorted sub-arrays. It then takes O(n) comparisons to get four-element sorted sub-arrays, and so on.
+  * in total it takes O(log n) sets (the logarithm measures how many times you can divide a number by 2 until you get a number that is 1 or less) of O(n) comparisons.
+  * overall the time complexity is O(n log(n)) - whether it's a best case or worst case scenario - which is much better than bubble, insertion or selection sort.
+  * it means that merge sort scales very well for large data sets.
+  * when implementing merge sort, write a function that takes two sorted arrays and merges them. Merge sort will then split these in half, recursively calling itself on each half, before merging the two sorted halves back together.
+  
+  
