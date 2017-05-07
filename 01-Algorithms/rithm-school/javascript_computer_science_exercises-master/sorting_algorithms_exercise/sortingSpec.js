@@ -73,21 +73,21 @@ describe("#mergeSort", function(){
 
 describe("#quickSort", function(){
 
-  describe("#pivot", function() {
-    it("should return the new index of the pivot element", function() {
-      expect(pivot(unsorted)).to.equal(2);
-      expect(pivot(unsortedNegative)).to.equal(4);
-    });
-
-    it("should mutate the input so that the pivot is in the right place", function() {
-      pivot(unsorted);
-      pivot(unsortedNegative);
-      expect(unsorted.slice(0,2)).to.include.members(sorted.slice(0,2));
-      expect(unsorted.slice(3)).to.include.members(sorted.slice(3));
-      expect(unsortedNegative.slice(0,4)).to.include.members(sorted.slice(0,4));
-      expect(unsortedNegative.slice(5)).to.include.members(sorted.slice(5));
-    });
-  });
+  // describe("#pivot", function() {
+  //   it("should return the new index of the pivot element", function() {
+  //     expect(pivot(unsorted)).to.equal(2);
+  //     expect(pivot(unsortedNegative)).to.equal(4);
+  //   });
+  //
+  //   it("should mutate the input so that the pivot is in the right place", function() {
+  //     pivot(unsorted);
+  //     pivot(unsortedNegative);
+  //     expect(unsorted.slice(0,2)).to.include.members(sorted.slice(0,2));
+  //     expect(unsorted.slice(3)).to.include.members(sorted.slice(3));
+  //     expect(unsortedNegative.slice(0,4)).to.include.members(sorted.slice(0,4));
+  //     expect(unsortedNegative.slice(5)).to.include.members(sorted.slice(5));
+  //   });
+  // });
 
   it("should sort an array of positive and negative numbers ", function(){
     expect(quickSort(unsorted)).to.deep.equal(sorted);

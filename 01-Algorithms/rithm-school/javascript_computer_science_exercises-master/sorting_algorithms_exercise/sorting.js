@@ -2,6 +2,11 @@
     References:
     [1] http://codingmiles.com/sorting-algorithms-insertion-sort-using-javascript/
     [2] https://www.nczonline.net/blog/tag/algorithms/
+    [3] http://www.codexpedia.com/javascript/javascript-quick-sort-implementation/
+    [4] https://en.wikibooks.org/w/index.php?title=Special:Search&search=Algorithm+Implementation%2FSorting%2F&searchToken=3qirj9q10lhftjtnzaifxinxi
+    [5] https://www.nczonline.net/blog/2012/11/27/computer-science-in-javascript-quicksort/
+    [6] https://github.com/benoitvallon/computer-science-in-javascript/tree/master/sorting-algorithms-in-javascript
+    [7] https://visualgo.net/en (visualize the sorting algorithms)
     
  */
 "use strict";
@@ -95,3 +100,24 @@ const merge = (left, right)=>{
 
 
 // 5. Implement quick sort. Your function should accept an array and return an array of sorted values. You can solve this iteratively or recursively.
+const partition = (array, start, end)=>{
+    // assumes the pivot is always the last element
+    let pivot = array[end], index = start;
+    for(let i = start; i < end; i++){
+        if(array[i] <= pivot){
+            [array[index], array[i]] = [array[i], array[index]];
+            index++;
+        }
+    }
+    [array[index], array[end]] = [array[end], array[index]];
+    return index;
+};
+
+const quickSort = (array, left = 0, right = array.length - 1)=>{
+    if(left < right){
+        let partitionIndex = partition(array, left, right);
+        quickSort(array, left, partitionIndex - 1);
+        quickSort(array, partitionIndex + 1, right);
+    }
+    return array;
+};

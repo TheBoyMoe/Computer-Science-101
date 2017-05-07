@@ -120,3 +120,5 @@ The space complexity is O(1) - we only require one additional unit of space for 
  
 The function total takes an array of length n, doubles each value in turn before adding those values to a new array and returning it.
 Both the time and space complexity are O(n). In this case we need n additional units of space, one for each value in the original array for each new value created before adding it to the new array.
+
+[Big-O Cheat Sheet](http://bigocheatsheet.com/)
