@@ -118,7 +118,7 @@ Guess a number between 0 and 100
         
     * Selection sort  
         - find the smallest elm in the list, swap it with the first elm, index 0
-        - repeat, find the smallest elm in the remaining elms(ignoring the foirst elm) and swap it with the elm at index 1.
+        - repeat, find the smallest elm in the remaining elms(ignoring the first elm) and swap it with the elm at index 1.
         - keep repeating.
         - complexity O(n^2)
          

@@ -16,10 +16,12 @@
  * like bubble sort the time complexity is O(n^2) since you're examining each element sorting sub-arrays, best case scenario is O(n) if there only one complete iteration necessary
 
 ### Selection Sort
- * assume that the first element in the array is the mnimum, iterate throught the array comparing each value in turn until you find a value which is smaller and then swap the two. Continue until the end of the array with the comparison. 
- * the left most value in the array is now the smallest in the list
- * repeat this process with the next element, and so on until the array is sorted.
+ * assume that the first element in the array is the minimum, iterate through the array comparing each value in turn until you find a value which is smaller and then swap the two. Continue until the end of the array with the comparison. 
+ * the left most value in the array, index 0, is now the smallest in the list
+ * repeat this process with the next element, find the smallest element amongst the remaining elements and swap it for the element at index 1.
+ * keep repeating with each element in turn.
  * in the best case scenario the tim complexity is O(n^2) since your repeating nested loops.
+ 
  
 Bubble, insertion and selection sorts are simple, but inefficient sorting algorithms with a typical time complexity of O(n^2). Practical sorting algorithms used are almost always those that have an average time complexity of O(n log n) - the most common are heap, merge and quick sort.
 
