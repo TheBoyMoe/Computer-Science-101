@@ -96,7 +96,7 @@ that the outer loop, which is O(n), performs an O(1) operation for each value of
 
 ### Space Complexity
 Big O doesn't just deal with the amount of time that different algorithms take or time complexity.
-It's also used to talk about the amount of smapce, or memory, that the program requires, or Space Complexity.
+It's also used to talk about the amount of space, or memory, that the program requires, or Space Complexity.
 We're often concerned with the Auxiliary Space Complexity - how much additional memory is required beyond what is allocated for the inputs themselves
 
     function total(array) {

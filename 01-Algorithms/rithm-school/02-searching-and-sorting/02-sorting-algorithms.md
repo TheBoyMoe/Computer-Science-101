@@ -8,12 +8,14 @@
  * you continue until you've run through an iteration where no swaps are made.
  * in best case scenario, e.g. you only need to iterate through the array once, the time complexity would be O(n).
  * it's typically O(n^2) - quadratic order of growth, since your iterating through nested loops - each array your running through a sub-array of the original.
+  * space usage of 1 
 
 ### Insertion Sort
  * start with the second element in the array and compare it with the element to it's left and swap if necessary.
  * you then move on to the next element and compare it to the elements that preceed it - the now sorted portion and insert it into it's correct position in the sorted portion. This is expensive as the sorted portion of the array grows since it requires shifting the elements that follow the inserted element by one.
  * then repeat the process comparing the next element to the elements to the right - the sorted portion and inserting it if necessary until the end is reached.
  * like bubble sort the time complexity is O(n^2) since you're examining each element sorting sub-arrays, best case scenario is O(n) if there only one complete iteration necessary
+  * space usage of 1
 
 ### Selection Sort
  * assume that the first element in the array is the minimum, iterate through the array comparing each value in turn until you find a value which is smaller and then swap the two. Continue until the end of the array with the comparison. 
@@ -21,6 +23,7 @@
  * repeat this process with the next element, find the smallest element amongst the remaining elements and swap it for the element at index 1.
  * keep repeating with each element in turn.
  * in the best case scenario the tim complexity is O(n^2) since your repeating nested loops.
+ * space usage of 1
  
  
 Bubble, insertion and selection sorts are simple, but inefficient sorting algorithms with a typical time complexity of O(n^2). Practical sorting algorithms used are almost always those that have an average time complexity of O(n log n) - the most common are heap, merge and quick sort.
@@ -36,5 +39,14 @@ Bubble, insertion and selection sorts are simple, but inefficient sorting algori
   * overall the time complexity is O(n log(n)) - whether it's a best case or worst case scenario - which is much better than bubble, insertion or selection sort.
   * it means that merge sort scales very well for large data sets.
   * when implementing merge sort, write a function that takes two sorted arrays and merges them. Merge sort will then split these in half, recursively calling itself on each half, before merging the two sorted halves back together.
+  * space usage O(n)
   
-  
+### Quick Sort
+  * example of a divide and conquer algorithm.
+  * start off by picking an element, the 'pivot', and then compare this element to every element in the array to it.
+  * move every element less than the pivot to the left (will be in any order), and every element greater than it to the right (again in any order).
+  * the pivot will now be in the right place.
+  * next, recursively call quicksort again on the left and right halves picking a pivot in each. Generally helpful to use a helper function to perform the recursion
+  * generally the median point is used as the pivot at each stage.
+  * typical time complexity (and best case) is O(n log n). Worst case scenario is O(n^2) - result of using the first or last element as the pivot of a sorted list.
+  * space usage of O(log n)
