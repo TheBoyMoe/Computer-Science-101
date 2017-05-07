@@ -10,9 +10,9 @@
  * it's typically O(n^2) - quadratic order of growth, since your iterating through nested loops - each array your running through a sub-array of the original.
 
 ### Insertion Sort
- * similar to bubble sort, except you start with the second element in the array and compare it with the element to it's left and swap if necessary.
- * you then move on to the next element and compare it to the sorted portion and insert it into it's correct position in the sorted portion, which is expensive since it requires shifting the elements that follow by one.
- * then repeat the process comparing the next element to the right of the sorted portion to sorted portion and inserting it if necessary until the end is reached.
+ * start with the second element in the array and compare it with the element to it's left and swap if necessary.
+ * you then move on to the next element and compare it to the elements that preceed it - the now sorted portion and insert it into it's correct position in the sorted portion. This is expensive as the sorted portion of the array grows since it requires shifting the elements that follow the inserted element by one.
+ * then repeat the process comparing the next element to the elements to the right - the sorted portion and inserting it if necessary until the end is reached.
  * like bubble sort the time complexity is O(n^2) since you're examining each element sorting sub-arrays, best case scenario is O(n) if there only one complete iteration necessary
 
 ### Selection Sort
