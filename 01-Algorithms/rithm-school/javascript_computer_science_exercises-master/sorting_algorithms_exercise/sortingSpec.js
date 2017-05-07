@@ -58,7 +58,7 @@ describe("#mergeSort", function(){
     it("should work for arrays of different sizes", function() {
       expect(merge([-5, 2],[0, 1, 2, 6])).to.deep.equal([-5, 0, 1, 2, 2, 6]);
     });
-  })
+  });
 
   it("should sort an array of positive and negative numbers ", function(){
     expect(mergeSort(unsorted)).to.deep.equal(sorted);

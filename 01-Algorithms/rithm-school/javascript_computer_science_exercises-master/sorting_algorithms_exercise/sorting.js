@@ -56,3 +56,42 @@ const insertionSort = (array)=>{
     }
     return array;
 };
+
+// 4. Implement merge sort. Your function should accept an array and return an array of sorted values. You can solve this iteratively or recursively.
+const mergeSort = (array)=>{
+    if(array.length < 2) return array; // base case
+    
+    let middle = Math.floor(array.length/2);
+    // divide
+    let left = mergeSort(array.slice(0, middle));
+    let right = mergeSort(array.slice(middle));
+    // conquer
+    return merge(left, right);
+};
+
+const merge = (left, right)=>{
+    let result = [], i = 0, j = 0;
+    while(i < left.length && j < right.length){
+        if(left[i] < right[j]){
+            result.push(left[i]);
+            i++;
+        } else {
+            result.push(right[j]);
+            j++;
+        }
+    }
+    // when right sub list is empty
+    while(i < left.length){
+        result.push(left[i]);
+        i++;
+    }
+    // when left sub list is empty
+    while(j < right.length){
+        result.push(right[j]);
+        j++;
+    }
+    return result;
+};
+
+
+// 5. Implement quick sort. Your function should accept an array and return an array of sorted values. You can solve this iteratively or recursively.
