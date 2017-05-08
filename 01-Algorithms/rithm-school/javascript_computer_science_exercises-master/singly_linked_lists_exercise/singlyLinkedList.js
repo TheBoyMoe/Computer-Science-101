@@ -13,7 +13,10 @@ function Node(val){
 }
 
 function SinglyLinkedList(array = []) {
-    this.head = null; // reference to the first node
+    // this implementation of linked list has a reference to the tail.
+    // means that pop/push operations are O(1), and not O(n), as you don't need
+    // to iterate over the array to arrive at the last node
+    this.head = null;
     this.tail = null;
     this.length = 0;
     
