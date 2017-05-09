@@ -17,6 +17,17 @@
     
  * typically search, insert and delete operations can all be performed in O(log n) time, space complexity is O(n). This is not the case if the tree is unbalanced, more nodes on one side compared ot the other - in worst case scenarios the run time can be O(n).
    
+
+### BST Traversal
+ * two algorithms are available for searching BST's which enable us to visit each node only once, each utilizes a secondary data structure in order to traverse the tree.
+    * Depth First Search (DFS) - uses a stack, three different approaches to performing the search
+        * pre-order - start at the root node and check the value, if it has a value, record it. Recursively call the pre-order function on the sub-tree to the left of the current node. Repeat the process on the sub-tree to the right 
+        
+        * in-order
+        
+        * post-order
+        
+    * Breadth First Search (BFS) - uses a queue
    
 #### Glossary
  * Root - The top node in a tree.
