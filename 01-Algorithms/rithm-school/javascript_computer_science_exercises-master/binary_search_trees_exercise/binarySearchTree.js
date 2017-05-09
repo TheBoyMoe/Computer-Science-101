@@ -77,12 +77,27 @@ BinarySearchTree.prototype.findRecursively = function (value) {
     return this.__find(value);
 };
 
+BinarySearchTree.prototype.toArray = function (node = this.root) {
+    let array = [];
+    if(node === null) return array;
+    
+    if(node.left)
+        array = array.concat(this.toArray(node.left));
+    
+    array.push(node.value);
+    
+    if(node.right)
+        array = array.concat(this.toArray(node.right));
+    
+    return array;
+};
+
 
 
 // HELPER FUNCTIONS
 BinarySearchTree.prototype.__insert = function (value, node = this.root) {
     if(node === null) return this;
-    
+
     if(this.compare(value, node.value) <= 0){
         if(node.left === null){
             node.left = new Node(value);
@@ -111,7 +126,7 @@ BinarySearchTree.prototype.__find = function (value, node = this.root, parent = 
 // ?? problems dealing with tree more than 3 levels deep
 BinarySearchTree.prototype.toString = function (node=this.root, indentation=0) {
     if (!node) return ' ';
-    
+
     let valueStr;
     if (node.value === null) {
         valueStr = "null";
@@ -120,11 +135,11 @@ BinarySearchTree.prototype.toString = function (node=this.root, indentation=0) {
     } else {
         valueStr = node.value.toString();
     }
-    
+
     let str = new Array(indentation + 1).join("  ") + valueStr + "\n";
     str += this.toString(node.right, indentation + 1);
     str += this.toString(node.left, indentation + 1);
-    
+
     return str;
 };
 
