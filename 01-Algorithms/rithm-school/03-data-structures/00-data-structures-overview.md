@@ -2,7 +2,7 @@
  * in computer science a data structure is simply a way of organizing data so it can be accessed efficiently - access could mean any of the CRUD operations.
  * data structure's performance is measured based on it's space complexity (amount of memory required to hold it), and time complexity - time required to perform [access, search, insert and delete](http://bigocheatsheet.com/), e.g for an array accessing any element, no matter the size of the array is an O(1) operation, whilst insert, search and delete operations are generally O(n) operations.
  
- ![Data structure Big-O operations](/home/theboymo/WORK/WEBDEV/COMPUTER-SCIENCE-101/01-Algorithms/rithm-school/03-data-structures/big-o.png)
+ ![Data structure Big-O operations](big-o.png)
 
 ### Arrays
  * most basic and frequently used data structure in javascript programs.
@@ -16,7 +16,7 @@
 
 
 ### References
-[Data structure overview](http://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/)
+[Data structure overview](ttp://blog.benoitvallon.com/data-structures-in-javascript/data-structures-in-javascript/)
 
 [Big-O Cheatsheet](http://bigocheatsheet.com/)
 

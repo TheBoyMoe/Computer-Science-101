@@ -2,7 +2,7 @@
  * are data structures consisting of nodes which are organised in parent-child relationships, each node has at most two children.
  * each node is in sorted order - all nodes to the left of any given node must have values less than that particular node, and vice versa.
  
- ![binary search tree](01-Algorithms/rithm-school/03-data-structures/200px-Binary_search_tree.png)
+ ![binary search tree](200px-Binary_search_tree.png)
  
  * inserting nodes into a binary tree can be executed iteratively or recursively
     * starting at the root, if it does not exist, insert the node there.
