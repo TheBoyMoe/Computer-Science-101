@@ -75,7 +75,7 @@ BinarySearchTree.prototype.findIteratively = function (value) {
 
 BinarySearchTree.prototype.findRecursively = function (value) {
     return this.__find(value);
-}
+};
 
 
 
@@ -107,3 +107,24 @@ BinarySearchTree.prototype.__find = function (value, node = this.root, parent = 
     
     return this.__find(value, node.right, node);
 };
+
+// ?? problems dealing with tree more than 3 levels deep
+BinarySearchTree.prototype.toString = function (node=this.root, indentation=0) {
+    if (!node) return ' ';
+    
+    let valueStr;
+    if (node.value === null) {
+        valueStr = "null";
+    } else if (node.value === undefined) {
+        valueStr = "undefined";
+    } else {
+        valueStr = node.value.toString();
+    }
+    
+    let str = new Array(indentation + 1).join("  ") + valueStr + "\n";
+    str += this.toString(node.right, indentation + 1);
+    str += this.toString(node.left, indentation + 1);
+    
+    return str;
+};
+
