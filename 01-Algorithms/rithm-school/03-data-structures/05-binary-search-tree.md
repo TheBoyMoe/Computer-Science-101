@@ -20,15 +20,19 @@
 
 ### BST Traversal
  * two algorithms are available for searching BST's which enable us to visit each node only once, each utilizes a secondary data structure in order to traverse the tree.
-    * Depth First Search (DFS) - uses a stack, three different approaches to performing the search
-        * pre-order - start at the root node and check the value, if it has a value, record it. Recursively call the pre-order function on the sub-tree to the left of the current node. Repeat the process on the sub-tree to the right 
+ 
+    * Depth First Search (DFS) - uses a stack, three different approaches to performing the search. the implementation of the three is very similar - once you implement one of these, you can implement the others by simply changing the order the code is executed in.
+        * pre-order - start at the root node and check the value, if it has a value, record it. Recursively call the pre-order function on the sub-tree to the left of the current node. Repeat the process on the sub-tree to the right of the current node. In the image below, starting at the root would capture F, B, A, D, C, E, G, I, H
+  ![Pre-Order Traversal](Sorted_binary_tree_preorder.svg)      
         
-        * in-order
+        * in-order - starting at the root node, recursively call the pre-order function on the subtree to the left of the current node. check the value of the current node, record it if it has one. Repeat the process for the subtree to the right of the current node. In the image below, starting at the root would capture A, B, C, D, E, F, G, H, I - nodes in order.
+  ![In-Order Traversal](Sorted_binary_tree_inorder.svg)
         
-        * post-order
+        * post-order - starting at the root node, recursively call the pre-order function on the subtree to the left of the current root, repeat the process with the subtree to the right. Check the value of the current node, record it if it has a value. Looking at the image below, using post-order would capture the values in the following order: A, C, E, D, B, H, I, G, F
+  ![Post-Order Traversal](Sorted_binary_tree_postorder.svg)
         
-    * Breadth First Search (BFS) - uses a queue
-   
+    * Breadth First Search (BFS) - uses a queue and searched the tree horizontally. Starting at the root, enqueue the root node. On dequeueing the node, capture it's value, if it has a left node, enqueue it, if it has a right node, enqueue it. While there are nodes in the queue, repeat the process. Dequeue the first, capture the value, enqueue it's left and right nodes if it has any in that order. Looking at the image below, using BFS results in the following order: F, B, G, A, D, I, C, E, H
+    
 #### Glossary
  * Root - The top node in a tree.
  * Child -A node directly connected to another node when moving away from the Root.
@@ -42,4 +46,7 @@
  * Level - The level of a node is defined by 1 + (the number of connections between the node and the root).
  * Height of node - The height of a node is the number of edges on the longest path between that node and a descendant leaf.
  * Height of tree- The height of a tree is the height of its root node.
- * Depth - The depth of a node is the number of edges from the tree's root node to the node.   
+ * Depth - The depth of a node is the number of edges from the tree's root node to the node.
+  
+#### References
+[Tree Traversal](https://en.wikipedia.org/wiki/Tree_traversal)  

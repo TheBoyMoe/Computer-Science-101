@@ -8,21 +8,22 @@
  * simple implementation
  
  
-    function Stack() {
-        this.stack = [];
-    }
-    
-    Stack.prototype.push = function(val) {
-        this.stack.push(val);
-    }
-    
-    Stack.prototype.pop = function() {
-        return this.stack.pop();
-    }
-    
-    Stack.prototype.length = function() {
-        return this.stack.length;
-    }
+        function Stack() {
+            this.stack = [];
+        }
+        
+        Stack.prototype.push = function(val) {
+            this.stack.push(val);
+        }
+        
+        Stack.prototype.pop = function() {
+            return this.stack.pop();
+        }
+        
+        Stack.prototype.length = function() {
+            return this.stack.length;
+        }
+        
     
  * using a stack backed by an array data structure would not be efficient since push operations in arrays are O(n) - although the implementation thus enforce LIFO.
  * a better implementation would use a doubly linked list, since pop and push operations are always O(1), or constant time. You could also use a singly linked list if you use the shift and unshift operations, which are also O(1). Depending on the implementation of the singly linked list, pop and push can be O(n) operations, linear time.    
