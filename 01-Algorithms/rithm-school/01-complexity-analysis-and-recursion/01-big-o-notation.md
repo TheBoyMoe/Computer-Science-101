@@ -122,3 +122,5 @@ The function total takes an array of length n, doubles each value in turn before
 Both the time and space complexity are O(n). In this case we need n additional units of space, one for each value in the original array for each new value created before adding it to the new array.
 
 [Big-O Cheat Sheet](http://bigocheatsheet.com/)
+[Intro to Algorithms](http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Weiss/Contents.htm)
+[More Intro to Algoritms](http://faculty.simpson.edu/lydia.sinapova/www/cmsc250/LN250_Levitin/Contents.htm) 
