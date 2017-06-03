@@ -93,6 +93,51 @@ BinarySearchTree.prototype.toArray = function (node = this.root) {
 };
 
 
+// search through each node in the binary search tree using
+// pre-order depth first search and return an array containing each node's value
+BinarySearchTree.prototype.DFSPreOrder = function () {
+	// TODO
+};
+
+
+//  search through each node in the binary search tree using
+// in-order depth first search and return an array containing each node's value
+BinarySearchTree.prototype.DFSInOrder = function () {
+	// TODO
+};
+
+
+// search through each node in the binary search tree using
+// post-order depth first search and return an array containing each node's value
+BinarySearchTree.prototype.DFSPostOrder = function () {
+	// TODO
+};
+
+
+// search through each node in the binary search tree using
+// breadth first search and return an array containing each node's value
+BinarySearchTree.prototype.breadthFirstSearch = function () {
+	let node = this.root, queue = [], data = [];
+	
+	// enqueue the node
+	queue.push(node);
+	
+	// dequeue the node, save it's value and enqueue any child nodes it might have
+	while(queue.length){
+		node = queue.shift();
+		data.push(node.value);
+		if(node.left) queue.push(node.left);
+		if(node.right) queue.push(node.right);
+	}
+	return data;
+};
+
+
+//  remove a node from a binary search tree and return the node
+BinarySearchTree.prototype.remove = function () {
+	// TODO
+};
+
 
 // HELPER FUNCTIONS
 BinarySearchTree.prototype.__insert = function (value, node = this.root) {
@@ -122,6 +167,19 @@ BinarySearchTree.prototype.__find = function (value, node = this.root, parent = 
     
     return this.__find(value, node.right, node);
 };
+
+BinarySearchTree.prototype.__findNextSmallest = function (node) {
+	if(!node || !node.left) return null;
+	
+	if(!node.left.right) return node.left;
+	
+	let current = node.left.right;
+	while(current.right !== null){
+		current = current.right;
+	}
+	return current;
+};
+
 
 // ?? problems dealing with tree more than 3 levels deep
 BinarySearchTree.prototype.toString = function (node=this.root, indentation=0) {

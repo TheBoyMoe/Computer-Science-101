@@ -33,6 +33,10 @@
         
     * Breadth First Search (BFS) - uses a queue and searched the tree horizontally. Starting at the root, enqueue the root node. On dequeueing the node, capture it's value, if it has a left node, enqueue it, if it has a right node, enqueue it. While there are nodes in the queue, repeat the process. Dequeue the first, capture the value, enqueue it's left and right nodes if it has any in that order. Looking at the image below, using BFS results in the following order: F, B, G, A, D, I, C, E, H
   ![Breadth First Search](Sorted_binary_tree_breadth-first_traversal.svg)  
+  
+  
+### BST Removal
+  
     
 #### Glossary
  * Root - The top node in a tree.
