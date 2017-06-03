@@ -36,7 +36,10 @@
   
   
 ### BST Removal
-  
+When you come to remove a node, three scenarios arise:
+  * the node has no children - simplest scenario, if the node to be removed is not the root node, we need to ensure that the parent knows the child node has been removed.
+  * the node has one child - ensure to update the parent of the removed node, setting it's left or right property to be the child of the removed node.
+  * the node has two children - most complex scenario, the subtree below the node still neds to satisfy the conditions of a BST. The process involves replacing the node to be removed with it's successor node. The successor is the left-most node of the right-child node. If the right-child has no left-child, then the successor is the right-child.
     
 #### Glossary
  * Root - The top node in a tree.
@@ -54,4 +57,5 @@
  * Depth - The depth of a node is the number of edges from the tree's root node to the node.
   
 #### References
-[Tree Traversal](https://en.wikipedia.org/wiki/Tree_traversal)  
+[Tree Traversal](https://en.wikipedia.org/wiki/Tree_traversal)
+[Practice Node Removal](https://visualgo.net/en/bst?slide=1)
