@@ -16,6 +16,7 @@ A simple example:
        if(num === 1) return 1; 
        return num + sumRange(num-1);
     }
+    
 The first line is the base case. In the second line we call the function again, but modify the parameter in such a way that we eventually reach the base case and terminate the function.
 
 If you call sumRange(4), for instance, then this function will itself call sumRange(3) on this line, 

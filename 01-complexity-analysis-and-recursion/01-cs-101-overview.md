@@ -50,7 +50,7 @@ Guess a number between 0 and 100
       
 ## Algorithms and Program Efficiency
 
- * Even though computers are speeding up, data sets are growing larger and larger - efficient algorithims are thus still important.
+ * Even though computers are speeding up, data sets are growing larger and larger - efficient algorithms are thus still important.
  * Ways of determining program efficiency (we want to evaluate just the algo, we don't want it affected by the implementation or the pc its run on)
     * time the operation different algos to solve the problem, e.g recursion v iterative technique. Affected by the implementation of the algo, spec of the pc, size of input.
     * count operations the number of operations as a size of the input. Assume operations such as math operations, comparisons, assignments, accessing objects from ram - count the number of operations as a function of the size of the input - give you an idea of the efficiency of the algo.
