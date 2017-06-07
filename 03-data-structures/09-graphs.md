@@ -65,3 +65,21 @@ Remove Vertex           O(|V|+|E|)             O(|V|2)
 Remove Edge             O(|E|)                 O(1)
 Query                   O(|V|+|E|)             O(1)
 Storage Space           O(|V|+|E|)             O(|V|2)
+
+
+
+#### Graph Traversal
+
+Two algorithms used to traverse through a graph are breadth first and depth first search, we'll also assume that all the vertices/nodes are connected. Both algorithms were used to search trees, but unlike trees:
+    * a graph may not have a hierarchical structure like a tree with a root node, so there may be no natural point where to begin the search. So we need to specify where the search should begin.
+    * when traversing a tree you start at the root and walk down the structure, picking up nodes as you go. With graphs this is not the case, so we need to keep track of nodes so we don't visit them again.
+    
+Whether you use a breadth first or depth first search, the operation is the same, the only difference, breadth first uses a queue while depth first uses a stack. Breadth first outline:
+    * create a queue and push the starting vertex on it.
+    * mark the verticie as having been visited
+    * while the queue is nonempty:
+        * pop a vertex off and push it into the array of vertices to be returned
+        * examine all vertices adjacent to the current vertex
+        * if an adjacent vertex has not been visited yet, push it into the queue and mark it as visited
+        
+Neither algorithm is optimal when dealing with vertices with weights, this is the realm of 'shortest path' algorithms, e.g. Dijkstra's and A* algorithms, which take into account the weights of edges to we can find the path between two paths at the lowest cost.    
