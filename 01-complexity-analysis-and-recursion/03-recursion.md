@@ -44,6 +44,7 @@ Examples of recursion:
         return num * factorial(num -1);
     }
     
+    
 ### Scope in Recursion
 Often times in recursion we create wrapper or helper methods which are called multiple times by the outer function as a means of creating additional scope - called Helper Method Recursion.
 
@@ -65,6 +66,7 @@ In a purely iterative solution you could pass a callback to function, e.g all fu
     all(["1","2",3,"4"], function(val){
         return typeof val === 'string';
     }); // false
+    
     
 The same method could be tackled using a recursive solution:
     
@@ -88,6 +90,7 @@ The same method could be tackled using a recursive solution:
     allRecursive(numbersArray, function(v) {
         return v > 0;
     });
+    
     
 The same problem can also be solved with pure recursion, i.e no use of a helper function - this commonly implemented by passing in smaller and smaller parameters to each recursive call
  
